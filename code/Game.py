@@ -1,25 +1,22 @@
-from operator import truediv
-import code
-from code.Menu import Menu
 import pygame
+
+from code.Menu import Menu
+
+pygame.mixer.pre_init(44100, -16, 1, 512)
+pygame.init()
 
 
 class Game:
-    def __init__(self): #construtor
-        pygame.init()
-        window = pygame.display.set_mode(size=(800, 600))
+    def __init__(self):
 
-    def run(self): #metodo
+        if pygame.mixer.get_init() is None:
+            print("Mixer NÃO inicializou")
+        else:
+            print("Mixer OK:", pygame.mixer.get_init())
+
+        self.window = pygame.display.set_mode((800,600))
+
+    def run(self):
         while True:
             menu = Menu(self.window)
             menu.run()
-            pass
-
-          #for event in pygame.event.get():
-           #     if event.type == pygame.QUIT:
-            #        pygame.quit()
-             #       quit()
-
-
-
-
