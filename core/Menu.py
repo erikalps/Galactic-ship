@@ -17,7 +17,7 @@ class Menu:
         self.window = window
 
         # carrega a imagem
-        self.surf = pygame.image.load('./asset/MenuBg.png')
+        self.surf = pygame.image.load('./asset/MenuBg.png').convert_alpha()
 
         # pega o tamanho da janela
         window_width = self.window.get_width()
@@ -33,8 +33,8 @@ class Menu:
         menu_option = 0
         while True:
             self.window.blit(self.surf, self.rect)
-            self.menu_text(70, "Mountain", (COLOR_ORANGE), (WIND_WIDTH / 2,120))
-            self.menu_text(70, "Shooter", ( COLOR_ORANGE), (WIND_WIDTH / 2, 160))
+            self.menu_text(50, "Mountain", (COLOR_ORANGE), ((WIND_WIDTH / 2), 70))
+            self.menu_text(50, "Shooter", ( COLOR_ORANGE), ((WIND_WIDTH / 2), 120))
 
             for i in range(len(MENU_OPTION)):
                 if i == menu_option:

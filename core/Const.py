@@ -13,7 +13,16 @@ ENTITY_SPEED ={
     'Level1Bg4' : 4,
     'Level1Bg5' : 5,
     'Level1Bg6' : 6,
+    'Player1' : 3,
+    'Player2' : 3,
+
+
 }
+
+
+
+
+
 
 #M
 MENU_OPTION = ('NEW GAME 1P',
